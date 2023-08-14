@@ -1,0 +1,123 @@
+.ticket-card {
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+  font-size: 0.7rem;
+  position: relative;
+  margin-bottom: 10px;
+
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+
+  transition: background-color 0.3s ease-in-out;
+}
+
+.ticket-card.completed {
+  background-color: #e6f7ff;
+}
+
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.circle:hover {
+  border-color: #333;
+}
+
+.ticket-card.completed .circle {
+  background-color: blue;
+  /* Change the background color */
+  color: white;
+  /* Change the text color */
+}
+
+.ticket-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.title {
+  margin: 0;
+  font-weight: bold;
+  /* Make the title bold */
+  margin-bottom: 5px;
+}
+.title:hover {
+  color: #e74c3c; /* Change color on hover */
+  transition: color 0.2s ease-in-out;
+}
+
+
+.tag {
+  margin: 0;
+  color: #666;
+  display: flex;
+  align-items: center;
+}
+
+.tag-text {
+  border: 1px solid #ccc;
+  padding: 2px 5px;
+  border-radius: 4px;
+  color: #777;
+  /* Change the color to a more greyish tone */
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.tag-text:hover {
+  transform: translateY(-2px); /* Lift the text slightly */
+  color: #555; /* Change the color slightly */
+}
+
+.exclamation-box {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  padding: 2px 6px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.exclamation-box:hover {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  background-color: #f0f0f0; /* Change the background color slightly */ /* Apply a scale transform on hover */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .ticket-card {
+    font-size: 0.7rem;
+    padding: 8px;
+  }
+  
+  .title {
+    font-size: 1rem;
+  }
+  
+  .tag-text {
+    padding: 1px 4px;
+  }
+}
