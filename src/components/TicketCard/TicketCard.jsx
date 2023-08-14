@@ -54,7 +54,7 @@ function TicketCard({ task, users, grouping }) {
   };
 
   return (
-    <div className={`ticket-card ${isCompleted ? "completed" : ""}`}>
+    <div className={`ticket-card ${isCompleted ? "completed" : ""}` } >
       <div className="circle" onClick={handleToggleComplete}>
         {/* {isCompleted ? '✓' : ''} */}
 
